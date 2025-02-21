@@ -1,0 +1,22 @@
+
+:root {
+    --red: #bf0603;
+    --black: #03071e;
+    --blue: #0d3b66;
+    --silver: #a9a8a4;
+    --orange: #eb5e28;
+  }
+
+.logo{
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+
+body{
+    background-color: var(--black);
+}
+.navbar{
+    background-color: var(--orange);
+}

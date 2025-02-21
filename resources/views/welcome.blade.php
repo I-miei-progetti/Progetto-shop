@@ -34,6 +34,7 @@
           </a>
           <ul class="dropdown-menu" data-bs-popper="static">
             <li><a class="dropdown-item" href="/Auto">Auto</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Componenti</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>

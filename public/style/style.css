@@ -7,6 +7,18 @@
     --orange: #eb5e28;
   }
 
+  .racing-sans-one-regular {
+    font-family: "Racing Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .russo-one-regular {
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+    
+  
 .logo{
     height: 70px;
     border-radius: 50%;
@@ -14,9 +26,83 @@
 
 
 
-body{
+.body{
     background-color: var(--black);
+    font-family: "Russo One", serif;
 }
 .navbar{
-    background-color: var(--orange);
+    background-color: var(--silver);
+    height: 85px;
+}
+
+
+.nav-item{
+    color: var(--blue);
+}
+
+.dropdown-menu[data-bs-popper] {
+  background-color: var(--orange);
+}
+.nav-link {
+  color:var(--blue)  !important;
+  transition: color 0.7s !important;
+}
+.nav-link:hover {
+  color:var(--red)  !important;
+  
+}
+.dropdown-item {
+  
+  color: var(--blue)!important;
+  font-family: "Racing Sans One", serif;
+  transition: color 0.7s !important;
+}
+.dropdown-item:hover {
+  
+  background-color: var(--orange)!important;
+  color:var(--silver)  !important;
+}
+
+.form-control {
+  background-color: var(--silver)!important;
+  border: solid var(--blue)!important;
+  /* border-left: transparent !important; */
+  color: var(--blue)!important;
+  border-radius: 0px!important;
+  margin-left: 0px !important;
+}
+
+.icon{
+height: 20px;
+}
+
+
+.input-group-text {
+ 
+  background-color: var(--silver)!important;
+  border: solid var(--blue)!important;
+  /* border-right: transparent !important; */
+  margin-right: -5px !important;
+}
+
+/* Rimuove l'alone blu di Bootstrap */
+.form-control:focus, 
+.input-group:focus-within .input-group-text {
+  outline: none !important;
+  box-shadow: 0 0 5px var(--orange) !important; /* Effetto luce su entrambi */
+  border-color: var(--orange) !important;
+  transition: color 0.7s !important;
+}
+
+/* Unisce visivamente icona e input */
+.input-group-text {
+  border-right: none !important;
+}
+
+.form-control {
+  border-left: none !important;
+}
+
+.btnSearch{
+  margin-right: 10px;
 }

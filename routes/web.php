@@ -13,3 +13,8 @@ Route::get('/Le nostre auto', function () {
 Route::get('/Auto', function () {
     return view('shopCar');
 });
+
+// use App\Http\Controllers\PubliController;
+
+
+// Route::get('/', [PubliController::class,'homepage'])->name('homepage');

@@ -25,7 +25,13 @@
 
 <body class="body">
     <x-navbar/>
+       @if (session('message'))
+       {{-- continuare dal minuto 45 video 1 e sistemare il margine qui sotto perche non si vede --}}
+           <div class="alert alert-success mt-5">
+            {{session('message')}}
+           </div>
 
+       @endif
     <div class="min-vh-100">
         {{ $slot }}
     </div>

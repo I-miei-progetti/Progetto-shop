@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Le nostre auto">Le nostre auto</a>
@@ -17,10 +17,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Shop
+                        Vendi
                     </a>
                     <ul class="dropdown-menu" data-bs-popper="static">
-                        <li><a class="dropdown-item" href="/Auto">Auto</a></li>
+                        <li><a class="dropdown-item" href="{{route('car.create')}}">Auto</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -28,7 +28,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Partners</a></li>
+                        <li><a class="dropdown-item" href="#">Diventa Nostro Partners</a></li>
                     </ul>
                 </li>
             </ul>

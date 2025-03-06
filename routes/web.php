@@ -1,20 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarsController;
+use App\Http\Controllers\PubliController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/Le nostre auto', function () {
-    return view('ourCar');
-});
-
-Route::get('/Auto', function () {
-    return view('shopCar');
-});
-
-// use App\Http\Controllers\PubliController;
-
-
-// Route::get('/', [PubliController::class,'homepage'])->name('homepage');
+Route::get('/', [PubliController::class,'home'])->name('home');
+Route::get('/car/create',[CarsController::class, 'create'])->name('car.create');

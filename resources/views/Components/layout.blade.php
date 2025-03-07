@@ -29,6 +29,7 @@
        {{-- continuare dal minuto 45 video 1 e sistemare il margine qui sotto perche non si vede --}}
            <div class="alert alert-success mt-5">
             {{session('message')}}
+            {{-- <button class="btn btn-primary btn-sm ms-3" onclick="redirect{{rooute('home')}}">OK</button> --}}
            </div>
 
        @endif

@@ -21,6 +21,11 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <meta charset="utf-8" />
+<title>Swiper demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+
 </head>
 
 <body class="body">
@@ -29,7 +34,7 @@
        {{-- continuare dal minuto 45 video 1 e sistemare il margine qui sotto perche non si vede --}}
            <div class="alert alert-success mt-5">
             {{session('message')}}
-            {{-- <button class="btn btn-primary btn-sm ms-3" onclick="redirect{{rooute('home')}}">OK</button> --}}
+            <button class="btn btn-primary btn-sm ms-3" onclick="change_style()">OK</button>
            </div>
 
        @endif
@@ -46,7 +51,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     <!-- my JS -->
-    <script src="/javascript/script.js"></script>
+    <script>
+    
+    
+    function change_style() {
+        var alerts = document.getElementsByClassName("alert");
+        for (var i = 0; i < alerts.length; i++) {
+            alerts[i].style.display = "none";
+        }
+        console.log("change_style");
+    }
+    </script>
 </body>
 
 </html>

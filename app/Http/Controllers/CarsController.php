@@ -28,4 +28,7 @@ class CarsController extends Controller
         $cars = Cars::latest()->get();
         return view('car.index',compact('cars'));
     }
+    public function show(Cars $car){
+        return view('car.show',compact('car'));
+    }
 }

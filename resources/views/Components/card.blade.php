@@ -6,6 +6,6 @@
       <p class="card-text">Anno: {{$car->year}}</p>
     
       <p class="card-text text-muted">Prezzo {{$car->price}}€</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="{{route('car.show',compact('car'))}}" class="btn btn-primary">Vedi il dettaglio</a>
     </div>
   </div>

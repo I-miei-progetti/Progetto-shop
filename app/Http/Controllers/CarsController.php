@@ -19,7 +19,13 @@ class CarsController extends Controller
             'year'=> $request->input('year'),
             'img'=> $request->file('img')->store('cover','public'),
             'price'=> $request->input('price')
+
         ]);
         return redirect(route('home'))->with('message','La tua Auto è stata caricata correttamente');
+    }
+
+    public function index(){
+        $cars = Cars::latest()->get();
+        return view('car.index',compact('cars'));
     }
 }

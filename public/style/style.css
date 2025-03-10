@@ -30,7 +30,7 @@
 .body{
     background-color: var(--black);
     font-family: "Russo One", serif;
-    padding-top: 85px
+    padding-top: 80px
 }
 /* inizio Navbar */
 .navbar{
@@ -182,4 +182,9 @@ swiper-slide .text {
 .alert{
   position: relative;
   z-index: 1050;
+}
+/* card */
+.cardimg{
+  height: 180px;
+  object-fit: cover;
 }

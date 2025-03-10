@@ -78,9 +78,9 @@
 
 <div class="container my-1">
     <div class="row justify-content-center">
-       <h2 class="my-3 text-light justify-content-center align-items-center">Le nostre novità</h3>
+       <h2 class="text-center my-5 text-light">Le Ultime Novità</h2>
         @foreach ($cars as $car)
-            <div class="col-12 col-md-3 d-flex justify-content-center">
+            <div class="col-12 col-md-3 d-flex justify-content-center mb-5">
                <x-card 
                :car="$car"
                />

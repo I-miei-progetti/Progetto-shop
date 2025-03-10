@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('car.index')}}">Auto in Vendita</a>
+                    <a class="nav-link" href="{{ route('car.index') }}">Auto in Vendita</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -20,12 +20,12 @@
                         Vendi
                     </a>
                     <ul class="dropdown-menu" data-bs-popper="static">
-                        <li><a class="dropdown-item" href="{{route('car.create')}}">Auto</a></li>
+                        <li><a class="dropdown-item" href="{{ route('car.create') }}">Auto</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item" href="#">Componenti</a></li>
-                       
+
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -34,13 +34,17 @@
                         Area Personale
                     </a>
                     <ul class="dropdown-menu" data-bs-popper="static">
-                        
-                        <li><a class="dropdown-item" href="#">Diventa Nostro Partners</a></li>
+
+                        <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Entra nella tua area privata</a></li>
+                        <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                     </ul>
+                </li>
+                <a class="nav-link">Ciao {{ Auth::use()->name }},
+
+                </a>
                 </li>
             </ul>
             <form class="d-flex" role="search">

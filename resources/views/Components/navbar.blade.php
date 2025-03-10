@@ -25,10 +25,21 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item" href="#">Componenti</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Area Personale
+                    </a>
+                    <ul class="dropdown-menu" data-bs-popper="static">
+                        
+                        <li><a class="dropdown-item" href="#">Diventa Nostro Partners</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Diventa Nostro Partners</a></li>
+                        <li><a class="dropdown-item" href="#">Entra nella tua area privata</a></li>
                     </ul>
                 </li>
             </ul>

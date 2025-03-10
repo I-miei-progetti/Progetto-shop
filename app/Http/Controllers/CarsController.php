@@ -19,6 +19,7 @@ class CarsController extends Controller
             'year'=> $request->input('year'),
             'img'=> $request->file('img')->store('cover','public'),
             'price'=> $request->input('price')
+            
 
         ]);
         return redirect(route('home'))->with('message','La tua Auto è stata caricata correttamente');

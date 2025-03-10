@@ -4,9 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Cars;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
-class CarsController extends Controller
+class CarsController extends Controller implements HasMiddleware
 {
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('auth', except: ['index']),
+           
+        ];
+    }
+
+
+
     public function create(){
         return view('car.create');
     }

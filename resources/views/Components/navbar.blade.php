@@ -34,19 +34,25 @@
                         Area Personale
                     </a>
                     <ul class="dropdown-menu" data-bs-popper="static">
-
-                        <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
-                        <li>
+                        @guest
+                            <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                             <hr class="dropdown-divider">
+                        @endguest
+                        <li>
+                            @csrf
+                            <a class="dropdown-item" href="{{ route('logout') }}">Esci</a>
                         </li>
-                        <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                     </ul>
                 </li>
                 <a class="nav-link">Ciao {{ Auth::use()->name }},
-
                 </a>
-                </li>
+
             </ul>
+
             <form class="d-flex" role="search">
                 <div class="input-group">
                     <span class="input-group-text"><img src="/icon/search-interface-symbol.png" class="icon"></span>
@@ -55,6 +61,8 @@
                 </div>
                 <button class="btn btn-outline-success btnSearch" type="submit"> Cerca</button>
             </form>
+
         </div>
+
     </div>
 </nav>

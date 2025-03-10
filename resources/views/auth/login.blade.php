@@ -28,6 +28,7 @@
                     </div>
                     <div class="my-5 text-center">
                         <button type="submit" class="btn btn-primary">Accedi</button>
+                        <p>Non sei registrato? <a href="{{route('register')}}">Registrati</a></p>
                     </div>
                     
                 </form>

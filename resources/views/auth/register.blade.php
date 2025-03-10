@@ -32,6 +32,7 @@
                     </div>
                     <div class="my-5 text-center">
                         <button type="submit" class="btn btn-primary">Registrati</button>
+                        <p>Sei registrato? <a href="{{route('login')}}">Accedi</a></p>
                     </div>
 
                 </form>

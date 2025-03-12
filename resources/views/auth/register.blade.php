@@ -3,7 +3,7 @@
     <div class="container my-1">
         <div class="row justify-content-center align-items-center mb-5">
             <div class="col-12 col-md-7 border shadow rounded">
-                <form class="m-5" method('POST') action="{{ route('register') }}">
+                <form class="m-5" method="POST" action="{{ route('register') }}">
                     @csrf
                     @if ($errors->any())
                         <div class="alert alert-danger">

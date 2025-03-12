@@ -43,14 +43,17 @@
                             <hr class="dropdown-divider">
                         @endguest
                         <li>
-                            @csrf
-                            <a class="dropdown-item" href="{{ route('logout') }}">Esci</a>
+                            {{-- @csrf fare il form per il bottone come nel video
+                            <a class="dropdown-item" href="{{ route('logout') }}">Esci</a> --}}
                         </li>
                     </ul>
                 </li>
-                <a class="nav-link">Ciao {{ Auth::use()->name }},
+                @auth
+                    
+                
+                <a class="nav-link">Ciao {{ Auth::user()->name }},
                 </a>
-
+                @endauth
             </ul>
 
             <form class="d-flex" role="search">

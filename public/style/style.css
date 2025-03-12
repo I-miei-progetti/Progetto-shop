@@ -1,104 +1,97 @@
-
 :root {
-    --red: #bf0603;
-    --black: #03071e;
-    --blue: #0d3b66;
-    --silver: #a9a8a4;
-    --orange: #eb5e28;
-  }
-
-  .racing-sans-one-regular {
-    font-family: "Racing Sans One", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .russo-one-regular {
-    font-family: "Russo One", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-    
-  
-.logo{
-    height: 70px;
-    border-radius: 50%;
-    
+  --red: #bf0603;
+  --black: #03071e;
+  --blue: #0d3b66;
+  --silver: #a9a8a4;
+  --orange: #eb5e28;
 }
 
-
-
-.body{
-    background-color: var(--black);
-    font-family: "Russo One", serif;
-    padding-top: 80px
+.racing-sans-one-regular {
+  font-family: "Racing Sans One", serif;
+  font-weight: 400;
+  font-style: normal;
 }
+.russo-one-regular {
+  font-family: "Russo One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  height: 70px;
+  border-radius: 50%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--silver);
+  text-shadow: 2px 2px 5px rgba(67, 65, 65, 0.5);
+}
+
+.body {
+  background-color: var(--black);
+  font-family: "Russo One", serif;
+  padding-top: 80px;
+}
+
 /* inizio Navbar */
-.navbar{
-    background-color: var(--silver);
-    height: 85px;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    z-index: 100000;
+.navbar {
+  background-color: var(--silver);
+  height: 85px;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 100000;
 }
 
-
-.nav-item{
-    color: var(--blue);
+.nav-item {
+  color: var(--blue);
 }
 
 .dropdown-menu[data-bs-popper] {
   background-color: var(--orange);
 }
 .nav-link {
-  color:var(--blue)  !important;
+  color: var(--blue) !important;
   transition: color 0.7s !important;
 }
 .nav-link:hover {
-  color:var(--red)  !important;
-  
+  color: var(--red) !important;
 }
+
 .dropdown-item {
-  
-  color: var(--blue)!important;
+  color: var(--blue) !important;
   font-family: "Racing Sans One", serif;
   transition: color 0.7s !important;
 }
 .dropdown-item:hover {
-  
-  background-color: var(--orange)!important;
-  color:var(--silver)  !important;
+  background-color: var(--orange) !important;
+  color: var(--silver) !important;
 }
 
 .form-control {
-  background-color: var(--silver)!important;
-  border: solid var(--blue)!important;
-  /* border-left: transparent !important; */
-  color: var(--blue)!important;
-  border-radius: 0px!important;
+  background-color: var(--silver) !important;
+  border: solid var(--blue) !important;
+  color: var(--blue) !important;
+  border-radius: 0px !important;
   margin-left: 0px !important;
 }
 
-.icon{
-height: 20px;
+.icon {
+  height: 20px;
 }
 
-
 .input-group-text {
- 
-  background-color: var(--silver)!important;
-  border: solid var(--blue)!important;
-  /* border-right: transparent !important; */
+  background-color: var(--silver) !important;
+  border: solid var(--blue) !important;
   margin-right: -5px !important;
 }
 
 /* Rimuove l'alone blu di Bootstrap */
-.form-control:focus, 
+.form-control:focus,
 .input-group:focus-within .input-group-text {
   outline: none !important;
-  box-shadow: 0 0 5px var(--orange) !important; /* Effetto luce su entrambi */
+  box-shadow: 0 0 5px var(--orange) !important;
   border-color: var(--orange) !important;
-  
 }
 
 /* Unisce visivamente icona e input */
@@ -110,20 +103,19 @@ height: 20px;
   border-left: none !important;
 }
 
-.btnSearch{
+.btnSearch {
   margin-right: 10px;
 }
 
-.btnSearch{
-  background-color: var(--blue)!important;
-  color: var(--silver)!important;
+.btnSearch {
+  background-color: var(--blue) !important;
+  color: var(--silver) !important;
   transition: color 0.7s !important;
 }
 
 /* Fine NavBar */
 /* carousel */
-html,
-body {
+html, body {
   position: relative;
   height: 100%;
 }
@@ -179,12 +171,44 @@ swiper-slide .text {
   max-width: 400px;
   line-height: 1.3;
 }
-.alert{
+
+.alert {
   position: relative;
   z-index: 1050;
 }
+
 /* card */
-.cardimg{
+.cardimg {
   height: 180px;
   object-fit: cover;
+}
+.card-text {
+  color: var(--black);
+}
+
+/* Style form create-blade */
+.blurred-bg {
+  background: url('/image/istockphoto-539234279-612x612.jpg') center/cover no-repeat;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blurred-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.blurred-bg form {
+  position: relative;
+  z-index: 1;
 }

@@ -4,18 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Cars;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Routing\Controllers\HasMiddleware;
 
-class CarsController extends Controller 
-// implements HasMiddleware
+
+class CarsController extends Controller implements HasMiddleware
 {
-    // public static function middleware(): array
-    // {
-    //     return [
-    //         new Middleware('auth', except: ['index']),
-           
-    //     ];
-    // }
+    public static function middleware(): array
+    {
+        return [
+            // con 'auth' prende in consoderazione tutte le funzioni che ci sono dentro il controller ma noi vogliamo che la index la vedano tutti quindi mettiamo solo la create e la store
+            // 'auth',
+            new Middleware('auth', except: ['index'])
+        ];
+    }
 
 
 
@@ -41,6 +43,7 @@ class CarsController extends Controller
         $cars = Cars::latest()->get();
         return view('car.index',compact('cars'));
     }
+    
     public function show(Cars $car){
         return view('car.show',compact('car'));
     }

@@ -43,16 +43,19 @@
                             <hr class="dropdown-divider">
                         @endguest
                         <li>
-                            {{-- @csrf fare il form per il bottone come nel video
-                            <a class="dropdown-item" href="{{ route('logout') }}">Esci</a> --}}
+                            <form action="{{route ('logout')}}" method="post" class="dropdown-item">
+                                @csrf
+                                <button class="btn btn-outline-success btnSearch" type="submit"> Esci</button>
+                               
+                            </form>
                         </li>
                     </ul>
                 </li>
                 @auth
-                    
-                
-                <a class="nav-link">Ciao {{ Auth::user()->name }},
-                </a>
+
+{{-- VIDEO 10/3 9:40 0.48.00 fai una prova a spostare il bottone fuori affianco a ciao qui sotto--}}
+                    <a class="nav-link">Ciao {{ Auth::user()->name }},
+                    </a>
                 @endauth
             </ul>
 

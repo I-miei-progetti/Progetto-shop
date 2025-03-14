@@ -28,34 +28,36 @@
 
                     </ul>
                 </li>
+                @guest {{--inserisco qui il @guest così che quando mi collego o mi registro scompare il dropdown per accedere e registrarsi--}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Area Personale
                     </a>
                     <ul class="dropdown-menu" data-bs-popper="static">
-                        @guest
+                        {{-- @guest => Usato per nascondere alla vista ciò che c'è sotto quando ci si collega ma a me non piace--}}
                             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                             <hr class="dropdown-divider">
-                        @endguest
+                        {{-- @endguest --}}
                         <li>
-                            <form action="{{route ('logout')}}" method="post" class="dropdown-item">
-                                @csrf
-                                <button class="btn btn-outline-success btnSearch" type="submit"> Esci</button>
-                               
-                            </form>
+                            
                         </li>
                     </ul>
                 </li>
+                @endguest 
                 @auth
-
-{{-- VIDEO 10/3 9:40 0.48.00 fai una prova a spostare il bottone fuori affianco a ciao qui sotto--}}
-                    <a class="nav-link">Ciao {{ Auth::user()->name }},
+                    <a class="nav-link">Ciao, {{ Auth::user()->name }},
                     </a>
+                    {{-- inserisco qui il bottone che avrei dovuto mettere all'interno del dropdown-menu qui sopra --}}
+                    <form action="{{route ('logout')}}" method="post" class="">
+                        @csrf
+                        <button class="btn btn-outline-success btnSearch" type="submit"> Esci</button>
+                       
+                    </form>
                 @endauth
             </ul>
 

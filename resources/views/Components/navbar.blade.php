@@ -50,8 +50,7 @@
                 </li>
                 @endguest 
                 @auth
-                    <a class="nav-link">Ciao, {{ Auth::user()->name }},
-                    </a>
+                    <a class="nav-link">Ciao, {{ Auth::user()->name }}</a>
                     {{-- inserisco qui il bottone che avrei dovuto mettere all'interno del dropdown-menu qui sopra --}}
                     <form action="{{route ('logout')}}" method="post" class="">
                         @csrf

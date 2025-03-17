@@ -251,3 +251,32 @@ swiper-slide .text {
   border: solid 2px var(--blue)!important;
 }
 /*  */
+
+
+/* Stelle sui commenti */
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    font-size: 2rem;
+    gap: 5px;
+  }
+  
+  .star-rating input {
+    display: none;
+  }
+  
+  .star-rating label {
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  /* Effetto di selezione: le stelle diventano dorate */
+  .star-rating input:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: gold;
+  }
+  

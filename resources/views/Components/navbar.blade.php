@@ -41,6 +41,9 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="{{ route('review.index') }}">Recensioni</a></li>
                             
                         {{-- @endguest --}}
                         <li>

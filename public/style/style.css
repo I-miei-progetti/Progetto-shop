@@ -1,217 +1,253 @@
 :root {
-  --red: #bf0603;
-  --black: #03071e;
-  --blue: #0d3b66;
-  --silver: #a9a8a4;
-  --orange: #eb5e28;
+    --red: #bf0603;
+    --black: #03071e;
+    --blue: #0d3b66;
+    --silver: #a9a8a4;
+    --orange: #eb5e28;
 }
 
 .racing-sans-one-regular {
-  font-family: "Racing Sans One", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Racing Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .russo-one-regular {
-  font-family: "Russo One", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .logo {
-  height: 70px;
-  border-radius: 50%;
+    height: 70px;
+    border-radius: 50%;
 }
 
-h1, h2, h3, h4, h5, h6{
-  color: var(--silver);
-  text-shadow: 2px 2px 5px rgba(67, 65, 65, 0.5);
+h1,
+h2,
+h4 {
+    color: var(--silver);
+    text-shadow: 2px 2px 5px rgba(67, 65, 65, 0.5);
 }
 
 .body {
-  background-color: var(--black);
-  font-family: "Russo One", serif;
-  padding-top: 80px;
+    background-color: var(--black);
+    font-family: "Russo One", serif;
+    padding-top: 80px;
 }
 
 /* inizio Navbar */
 .navbar {
-  background-color: var(--silver);
-  height: 85px;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  z-index: 100000;
+    background-color: var(--silver);
+    height: 85px;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 100000;
 }
 
 .nav-item {
-  color: var(--blue);
+    color: var(--blue);
 }
 
 .dropdown-menu[data-bs-popper] {
-  background-color: var(--orange);
+    background-color: var(--orange);
 }
 .nav-link {
-  color: var(--blue) !important;
-  transition: color 0.7s !important;
+    color: var(--blue) !important;
+    transition: color 0.7s !important;
 }
 .nav-link:hover {
-  color: var(--red) !important;
+    color: var(--red) !important;
 }
 
 .dropdown-item {
-  color: var(--blue) !important;
-  font-family: "Racing Sans One", serif;
-  transition: color 0.7s !important;
+    color: var(--blue) !important;
+    font-family: "Racing Sans One", serif;
+    transition: color 0.7s !important;
 }
 .dropdown-item:hover {
-  background-color: var(--orange) !important;
-  color: var(--silver) !important;
+    background-color: var(--orange) !important;
+    color: var(--silver) !important;
 }
+/* 
 
-.form-control {
-  background-color: var(--silver) !important;
-  border: solid var(--blue) !important;
-  color: var(--blue) !important;
-  border-radius: 0px !important;
-  margin-left: 0px !important;
-}
-
-.icon {
-  height: 20px;
-}
-
-.input-group-text {
-  background-color: var(--silver) !important;
-  border: solid var(--blue) !important;
-  margin-right: -5px !important;
-}
 
 /* Rimuove l'alone blu di Bootstrap */
-.form-control:focus,
-.input-group:focus-within .input-group-text {
+/* .input-group:focus-within {
   outline: none !important;
   box-shadow: 0 0 5px var(--orange) !important;
   border-color: var(--orange) !important;
+  border-radius: 5px !important;
 }
 
-/* Unisce visivamente icona e input */
-.input-group-text {
-  border-right: none !important;
-}
 
-.form-control, .form-control:focus {
-  border-left: none !important;
-}
 
+ */
 .btnSearch {
-  margin-right: 10px;
+    background-color: var(--blue) !important;
+    color: var(--silver) !important;
+    transition: color 0.7s !important;
+    margin-right: 10px;
+}
+.btnSearch:hover{
+  border-color: var(--orange) !important;
 }
 
-.btnSearch {
-  background-color: var(--blue) !important;
-  color: var(--silver) !important;
-  transition: color 0.7s !important;
+.icon {
+    height: 20px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+}
+
+.search-input {
+    border: none !important;
+    outline: none !important;
+    padding: 6px;
+    background-color: var(--silver);
+}
+.search-input:hover {
+    transition: 2s;
+    background-color: var(--orange);
+}
+
+.input-groupsh {
+    border: solid 2px var(--blue);
+    border-radius: 5px;
+    background-color: var(--silver);
+}
+
+.input-groupsh:hover {
+    border: solid 2px var(--orange) !important;
+    transition: 2s;
+    background-color: var(--orange);
 }
 
 /* Fine NavBar */
 /* carousel */
-html, body {
-  position: relative;
-  height: 100%;
+html,
+body {
+    position: relative;
+    height: 100%;
 }
 
 body {
-  background: #eee;
-  font-family: "Racing Sans One", serif;
-  font-size: 20px;
-  color: #000;
-  margin: 0;
-  padding: 0;
+    background: #eee;
+    font-family: "Racing Sans One", serif;
+    font-size: 20px;
+    color: #000;
+    margin: 0;
+    padding: 0;
 }
 
 swiper-container {
-  width: 100%;
-  height: 100%;
-  background: #000;
-  margin-top: 85px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    margin-top: 85px;
 }
 
 swiper-slide {
-  font-size: 18px;
-  color: #FFFFFF;
-  text-shadow: 2px 2px 4px black;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 40px 60px;
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px black;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
 }
 
 .parallax-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130%;
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  filter: blur(5px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
 }
 
 swiper-slide .title {
-  font-size: 41px;
-  font-weight: 300;
+    font-size: 41px;
+    font-weight: 300;
 }
 
 swiper-slide .subtitle {
-  font-size: 21px;
+    font-size: 21px;
 }
 
 swiper-slide .text {
-  font-family: "Russo One", serif;
-  font-size: 20px;
-  max-width: 400px;
-  line-height: 1.3;
-  color: white !important;
-  text-shadow: 2px 2px 4px black;
+    font-family: "Russo One", serif;
+    font-size: 20px;
+    max-width: 400px;
+    line-height: 1.3;
+    color: white !important;
+    text-shadow: 2px 2px 4px black;
 }
 
 .alert {
-  position: relative;
-  z-index: 1050;
+    position: relative;
+    z-index: 1050;
 }
 
 /* card */
 .cardimg {
-  height: 180px;
-  object-fit: cover;
+    height: 180px;
+    object-fit: cover;
 }
 .card-text {
-  color: var(--black);
+    color: var(--black);
 }
 
 /* Style form create-blade */
 .blurred-bg {
-  background: url('/image/istockphoto-539234279-612x612.jpg') center/cover no-repeat;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+    background: url("/image/istockphoto-539234279-612x612.jpg") center/cover
+        no-repeat;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .blurred-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); 
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  z-index: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    z-index: 0;
 }
 
 .blurred-bg form {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
+
+/* form control */
+.form-control {
+    background-color: var(--silver) !important;
+    border: solid var(--blue) !important;
+    color: var(--blue) !important ;
+    border-radius: 0px !important;
+    margin-left: 0px !important;
+}
+.form-control:focus {
+    box-shadow: 0 0 5px var(--orange) !important;
+    border-color: var(--orange) !important;
+    outline: none !important;
+}
+
+/* footer */
+.card-body{
+  background-color: var(--silver)!important;
+  border: solid 2px var(--blue)!important;
+}
+/*  */

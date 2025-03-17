@@ -5,6 +5,6 @@
       <p class="card-text">Modello: {{$car->name}}</p>
       <p class="card-text">Anno: {{$car->year}}</p>
       <p class="card-text">Prezzo: {{$car->price}}€</p>
-      <a href="{{route('car.show',compact('car'))}}" class="btn btn-primary">Vedi il dettaglio</a>
+      <a href="{{route('car.show',compact('car'))}}" class="btn btnSearch">Vedi il dettaglio</a>
     </div>
   </div>

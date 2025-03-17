@@ -41,7 +41,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
-                            <hr class="dropdown-divider">
+                            
                         {{-- @endguest --}}
                         <li>
                             
@@ -60,14 +60,18 @@
                 @endauth
             </ul>
 
-            <form class="d-flex" role="search">
-                <div class="input-group">
-                    <span class="input-group-text"><img src="/icon/search-interface-symbol.png" class="icon"></span>
-                    <div class="col-sm-10 col-md-8"><input class="form-control me-2" type="search"
-                            placeholder="Cerca nel sito..." aria-label="Search"></div>
+            <div class="search-bar d-flex gap-4 mx-2">
+
+                <div class="input-group input-groupsh px-1">
+                    
+                    <span class="icon-container"><img src="/icon/search-interface-symbol.png" class="icon"></span>
+
+                    <div class="input-container"><input class="search-input" type="search" placeholder="Cerca nel sito..." aria-label="Search"></div>
+
                 </div>
+
                 <button class="btn btn-outline-success btnSearch" type="submit"> Cerca</button>
-            </form>
+            </div>
 
         </div>
 

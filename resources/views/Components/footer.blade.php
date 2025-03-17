@@ -2,19 +2,17 @@
     <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="true" href="#">Active</a>
+                <a class="nav-link active" aria-current="true" href="#">Chi Siamo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link Utili</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
+           
         </ul>
     </div>
     <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Progetto Shop</h5>
+        <p class="card-text">Realizzato da Emmanuele Manco e Co.®</p>
+        <a href="{{route('home')}}" class="btn btnSearch">Torna alla Home Page</a>
     </div>
 </div>

@@ -47,4 +47,8 @@ class CarsController extends Controller implements HasMiddleware
     public function show(Cars $car){
         return view('car.show',compact('car'));
     }
+
+    public function update(Cars $car){
+        return view('car.update');
+    }
 }

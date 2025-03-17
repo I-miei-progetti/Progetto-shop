@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cars;
 use Illuminate\Http\Request;
+use App\Http\Requests\CarRequest;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Routing\Controllers\HasMiddleware;
 
@@ -25,7 +26,7 @@ class CarsController extends Controller implements HasMiddleware
         return view('car.create');
     }
 
-    public function store(Request $request){
+    public function store(CarRequest $request){
         // dd($request->all());
         Cars::create([
             'brand'=> $request->input('brand'),

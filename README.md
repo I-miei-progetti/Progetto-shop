@@ -1,3 +1,4 @@
+video 2 del 6/3
 video 1 del 10/03-creazione di un oggetto nel database
 video 2 del 10/03 -Cancellare e modificare un oggetto nel database (minuto 16:50)
 

@@ -42,18 +42,26 @@
               <button type="submit" class="btn btnSearch">Invia Recensione</button>
           </form>
           
-            @foreach ($reviews as $review)
-                <div class="col-12 col-md-3 d-flex justify-content-center mb-5">
-                 <div class="border shadow rounded">
-                    <div class="m-5">
-                        <p class="text-light">Nome: {{$review->name}} </p>
-                        <p class="text-light">Commento: {{$review->comment}} </p>
-                        <p class="text-light">Voto: {{$review->rating}} su 5 </p>
-                    </div>
-                 </div>
-                </div>
-    
-            @endforeach
+          @foreach ($reviews as $review)
+          <div class="col-12 col-md-3 d-flex justify-content-center mb-5">
+              <div class="border shadow rounded">
+                  <div class="m-5">
+                      <p class="text-light">Nome: {{$review->name}} </p>
+                      <p class="text-light">Commento: {{$review->comment}} </p>
+                      <p class="text-light">Voto:  
+                          @for ($i = 1; $i <= 5; $i++)
+                              @if ($i <= $review->rating)
+                                  <i class="fas fa-star text-warning"></i> <!-- Stella piena -->
+                              @else
+                                  <i class="far fa-star text-warning"></i> <!-- Stella vuota -->
+                              @endif
+                          @endfor
+                      </p>
+                  </div>
+              </div>
+          </div>
+      @endforeach
+      
         </div>
     </div>
     

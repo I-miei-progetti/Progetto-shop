@@ -5,6 +5,10 @@ use App\Http\Controllers\PubliController;
 use App\Http\Controllers\ReviewController;
 
 Route::get('/', [PubliController::class,'home'])->name('home');
+Route::get('/work/page',[PubliController::class,'work'])->name('work');
+Route::post('/work/submit',[PubliController::class,'submit'])->name('work.submit');
+
+
 Route::get('/car/create',[CarsController::class, 'create'])->name('car.create');
 Route::get('/car/all',[CarsController::class, 'index'])->name('car.index');
 Route::get('/car/show{car}',[CarsController::class, 'show'])->name('car.show');

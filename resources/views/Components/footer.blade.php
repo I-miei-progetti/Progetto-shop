@@ -2,10 +2,10 @@
     <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="true" href="#">Chi Siamo</a>
+                <a class="nav-link active" aria-current="true" href="{{route('home')}}">Chi Siamo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link Utili</a>
+                <a class="nav-link" href="{{ route('work') }}">Lavora con Noi</a>
             </li>
            
         </ul>

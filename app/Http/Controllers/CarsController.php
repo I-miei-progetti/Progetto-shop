@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Cars;
 use Illuminate\Http\Request;
 use App\Http\Requests\CarRequest;
+use App\Http\Requests\UpdateCarRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Routing\Controllers\HasMiddleware;
 
@@ -25,6 +27,18 @@ class CarsController extends Controller implements HasMiddleware
     public function create(){
         return view('car.create');
     }
+
+public function edit(UpdateCarRequest $request, Cars $car){
+// dd($request->all(), $car);
+$car->brand=$request->brand;
+$car->name=$request->name;
+$car->year=$request->year;
+$car->price=$request->price;
+$car->img=$request->has('img')?$request->file('img')->store('cover','public'):$car->img;
+$car->save();
+return redirect(route('car.show',compact('car')))->with ('message','Insersione modificata con successo!');
+}
+
 
     public function store(CarRequest $request){
         // dd($request->all());
@@ -50,6 +64,6 @@ class CarsController extends Controller implements HasMiddleware
     }
 
     public function update(Cars $car){
-        return view('car.update');
+        return view('car.update', compact('car'));
     }
 }

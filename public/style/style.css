@@ -69,6 +69,11 @@ h4 {
     background-color: var(--orange) !important;
     color: var(--silver) !important;
 }
+
+.dropstart .dropdown-toggle::before {
+    content: ''!important;
+    border: none!important;
+}
 /* 
 
 
@@ -246,13 +251,18 @@ swiper-slide .text {
 }
 
 /* footer */
-.card-body{
-  background-color: var(--silver)!important;
-  border: solid 2px var(--blue)!important;
+.footerColor{
+  background-color: var(--silver);
+  
+}
+.textfooter{
+    color: var(--blue);
 }
 /*  */
 
-
+.copyright{
+    color: rgb(222, 217, 217);
+}
 /* Stelle sui commenti */
 
 .star-rating {

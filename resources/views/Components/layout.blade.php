@@ -30,7 +30,13 @@
 </head>
 
 <body class="body">
-    <x-navbar/>
+
+    <div>
+        <div>
+            <x-navbar/>
+        </div>
+        
+
        @if (session('message'))
        {{-- continuare dal minuto 45 video 1 e sistemare il margine qui sotto perche non si vede --}}
            <div class="alert alert-success mt-5">
@@ -39,11 +45,17 @@
            </div>
 
        @endif
-    <div class="min-vh-100">
-        {{ $slot }}
+        <div style="min-height:calc(100svh - 157px)">
+            {{ $slot }}
+        </div>
+
+        
     </div>
 
-    <x-footer/>
+    <div>
+        <x-footer/>
+    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

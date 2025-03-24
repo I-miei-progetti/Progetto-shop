@@ -24,10 +24,10 @@
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password">
                     </div>
-                    <div class="mb-3 text-white">
+                    {{-- <div class="mb-3 text-white">
                         <label for="exampleInputPassword1" class="form-label">Conferma Password</label>
                         <input type="password" class="form-control" name="password_confirmation">
-                    </div>
+                    </div> --}}
                     <div class="my-5 text-center">
                         <button type="submit" class="btn btnSearch">Accedi</button>
                         <p class="text-white m-2">Non sei registrato? <a href="{{route('register')}}">Registrati</a></p>

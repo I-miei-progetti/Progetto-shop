@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cars;
 use Illuminate\Http\Request;
 use App\Http\Requests\CarRequest;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UpdateCarRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Routing\Controllers\Middleware;
@@ -28,6 +29,12 @@ class CarsController extends Controller implements HasMiddleware
         return view('car.create');
     }
 
+
+    public function userCar(){
+        $cars=Cars::where('username', Auth::user()->name)->get();
+        return view('car.user',compact('cars'));
+    }
+
 public function edit(UpdateCarRequest $request, Cars $car){
 // dd($request->all(), $car);
 $car->brand=$request->brand;
@@ -47,7 +54,8 @@ return redirect(route('car.show',compact('car')))->with ('message','Insersione m
             'name'=> $request->input('name'),
             'year'=> $request->input('year'),
             'img'=> $request->file('img')->store('cover','public'),
-            'price'=> $request->input('price')
+            'price'=> $request->input('price'),
+            'user_id'=>Auth::user()->id
             
 
         ]);
@@ -65,5 +73,12 @@ return redirect(route('car.show',compact('car')))->with ('message','Insersione m
 
     public function update(Cars $car){
         return view('car.update', compact('car'));
+    }
+
+
+
+    public function destroy (Cars $car){
+$car->delete();
+return redirect(route('home'))->with('message', 'Insersione eliminata con successo');
     }
 }

@@ -7,6 +7,7 @@ use App\Http\Controllers\ReviewController;
 Route::get('/', [PubliController::class,'home'])->name('home');
 Route::get('/work/page',[PubliController::class,'work'])->name('work');
 
+Route::geT('/user/car',[CarsController::class, 'userCar'])->name('car.user');
 Route::get('/car/create',[CarsController::class, 'create'])->name('car.create');
 Route::get('/car/all',[CarsController::class, 'index'])->name('car.index');
 Route::get('/car/show{car}',[CarsController::class, 'show'])->name('car.show');
@@ -18,3 +19,5 @@ Route::post('/review/store',[ReviewController::class, 'store'])->name('review.st
 Route::post('/car/store',[CarsController::class, 'store'])->name('car.store');
 
 Route::put('/car/edit/{car}',[CarsController::class,'edit'])->name('car.edit');
+
+Route::delete('/car/delete{car}',[CarsController::class,'destroy'])->name('car.delete');

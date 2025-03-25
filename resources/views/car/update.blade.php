@@ -40,7 +40,7 @@
                     </div>
                     <div class="mb-3 text-white">
                         <label class="form-label">A quanto vuoi vendere</label>
-                        <input type="number" class="form-control" placeholder="€" name="price">
+                        <input type="number" class="form-control" placeholder="€" name="price" value="{{$car->price}}">
                     </div>
 
                     <button type="submit" class="btn  btnSearch m-2">Carica</button>

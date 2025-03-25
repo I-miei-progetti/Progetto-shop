@@ -290,3 +290,26 @@ swiper-slide .text {
     color: gold;
   }
   
+
+  /* paginator */
+  .custom-pagination .pagination {
+    background-color: var(--blue); /* Cambia colore di sfondo */
+    padding: 10px; /* Spazio interno */
+    border-radius: 8px; /* Smussa gli angoli */
+}
+
+.custom-pagination .pagination .page-item .page-link {
+    color: var(--black); /* Cambia il colore del testo */
+    border: none; /* Rimuove il bordo */
+    padding: 8px 12px; /* Aggiunge spazio attorno ai numeri */
+}
+
+.custom-pagination .pagination .page-item.active .page-link {
+    background-color: var(--orange); /* Cambia il colore della pagina attiva */
+    font-weight: bold; /* Rende il testo in grassetto */
+}
+
+.custom-pagination .pagination .page-item .page-link:hover {
+    background-color: var(--light-blue); /* Cambia colore al passaggio del mouse */
+    color: black;
+}

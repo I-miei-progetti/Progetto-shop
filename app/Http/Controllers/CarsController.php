@@ -31,18 +31,26 @@ class CarsController extends Controller implements HasMiddleware
 
 
     public function userCar(){
-        $cars=Cars::where('username', Auth::user()->name)->get();
+        $cars=Cars::where('user_id', Auth::user()->id)->get();
         return view('car.user',compact('cars'));
     }
 
 public function edit(UpdateCarRequest $request, Cars $car){
 // dd($request->all(), $car);
-$car->brand=$request->brand;
-$car->name=$request->name;
-$car->year=$request->year;
-$car->price=$request->price;
-$car->img=$request->has('img')?$request->file('img')->store('cover','public'):$car->img;
-$car->save();
+$car->update([
+    'brand'=> $request->input('brand'),
+            'name'=> $request->input('name'),
+            'year'=> $request->input('year'),
+            'img'=> $request->has('img') ? $request->file('img')->store('cover','public'):$car->img,
+            'price'=> $request->input('price'),
+           
+]);
+// $car->brand=$request->brand;
+// $car->name=$request->name;
+// $car->year=$request->year;
+// $car->price=$request->price;
+// $car->img=$request->has('img')?$request->file('img')->store('cover','public'):$car->img;
+// $car->save();
 return redirect(route('car.show',compact('car')))->with ('message','Insersione modificata con successo!');
 }
 
@@ -63,8 +71,11 @@ return redirect(route('car.show',compact('car')))->with ('message','Insersione m
     }
 
     public function index(){
-        $cars = Cars::latest()->get();
+         // $cars = Cars::latest()->get();
+        $cars = Cars::orderBy('created_at','DESC')->paginate(8);// uso questa dicitura per ordinare le card in base al numero dentro il paginate
         return view('car.index',compact('cars'));
+       
+       
     }
     
     public function show(Cars $car){

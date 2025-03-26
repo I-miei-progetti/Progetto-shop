@@ -7,7 +7,7 @@ use App\Http\Controllers\ReviewController;
 Route::get('/', [PubliController::class,'home'])->name('home');
 Route::get('/work/page',[PubliController::class,'work'])->name('work');
 
-Route::geT('/user/car',[CarsController::class, 'userCar'])->name('car.user');
+Route::get('/user/car',[CarsController::class, 'userCar'])->name('car.user');
 Route::get('/car/create',[CarsController::class, 'create'])->name('car.create')->middleware('auth'); //inserisco middleware al fine di negare la vista per aggiungere 
 Route::get('/car/all',[CarsController::class, 'index'])->name('car.index');
 Route::get('/car/show{car}',[CarsController::class, 'show'])->name('car.show');

@@ -80,7 +80,7 @@
                             </ul>
                         </div>
                     @endguest
-                    @auth
+                    @auth {{-- se si conosce l'uri un utente può accedervi lo stesso per questo in web.php utilizzo il middleware--}}
                         <a class="nav-link">Ciao, {{ Auth::user()->name }}</a>
                         {{-- inserisco qui il bottone che avrei dovuto mettere all'interno del dropdown-menu qui sopra --}}
                         <form action="{{ route('logout') }}" method="post" class="">

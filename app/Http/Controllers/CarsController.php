@@ -57,7 +57,8 @@ return redirect(route('car.show',compact('car')))->with ('message','Insersione m
 
     public function store(CarRequest $request){
         // dd($request->all());
-        Cars::create([
+        // Cars::create
+        Auth::user()->cars()-> create([
             'brand'=> $request->input('brand'),
             'name'=> $request->input('name'),
             'year'=> $request->input('year'),

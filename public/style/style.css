@@ -292,6 +292,7 @@ swiper-slide .text {
   
 
   /* paginator */
+  
   .custom-pagination .pagination {
     background-color: var(--blue); /* Cambia colore di sfondo */
     padding: 10px; /* Spazio interno */
@@ -310,6 +311,6 @@ swiper-slide .text {
 }
 
 .custom-pagination .pagination .page-item .page-link:hover {
-    background-color: var(--light-blue); /* Cambia colore al passaggio del mouse */
+    background-color: var(--orange); /* Cambia colore al passaggio del mouse */
     color: black;
 }

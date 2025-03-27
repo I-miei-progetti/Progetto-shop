@@ -24,7 +24,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Componenti</a></li>
+                        <li><a class="dropdown-item" href="{{ route('component.index') }}">Componenti</a></li>
                         <hr class="dropdown-divider">
                         <li><a class="dropdown-item" href="{{ route('review.index') }}">Recensioni</a></li>
                         <li>

@@ -8,6 +8,7 @@
 
 - [X]video 2 del 17/03- crea dei comandi sulla pagina per saltare da una pagina ad un altra e vedere le card su altre pagine
 - [X]video 2 del 17/03- da minuto 0.16.00 
-- [X]video 
+- [ ]video 1 del 18/3 - dal minuto 00.50.00
+- [ ]devo creare rotta. controller e vista per richiamare il compomente come con x card 
 - [ ]Finere il frontend
 

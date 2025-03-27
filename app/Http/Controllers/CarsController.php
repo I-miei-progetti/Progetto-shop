@@ -93,4 +93,13 @@ return redirect(route('car.show',compact('car')))->with ('message','Insersione m
 $car->delete();
 return redirect(route('home'))->with('message', 'Insersione eliminata con successo');
     }
+
+
+public function componenti(){
+    return view ('component.shop');
+}
+
+
+
+
 }

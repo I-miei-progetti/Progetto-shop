@@ -14,22 +14,23 @@
                         {{-- wire:model serve per comunicare con l'attributo dichiarato in ComponentForm --}}
                         <input type="text" class="form-control" wire:model="name"
                             placeholder="es.Turbina Garrett GTX3076R" name="name">
-
+                            @error('name') <span class="error alert alert-danger">{{ $message }}</span> @enderror 
                     </div>
 
                     <div class="mb-3 text-white">
                         <label class="form-label">Categoria</label>
                         <input type="text" class="form-control" wire:model="category" placeholder="es.Motore"
                             name="category">
-
+                            @error('category') <span class="error alert alert-danger">{{ $message }}</span> @enderror 
                     </div>
 
 
                     <div class="mb-3 text-white">
                         <label type="number">UPC</label>
-                        <input type="number" name="year" class="form-control" wire:model="upc" min="1900"
+                        <input type="number" name="year" class="form-control" wire:model.blur="upc" min="1900"
                             max="2100" step="1" placeholder="Es. 123456789" name="upc">
-
+                            @error('upc') <span class="error alert alert-danger">{{ $message }}</span> @enderror 
+                            <p class="copyright">{{ $upc }}</p>
                     </div>
 
                     <div class="mb-3 text-white">
@@ -42,19 +43,20 @@
                         <label class="form-label">Marca</label>
                         <input type="text" class="form-control" wire:model="brand" placeholder="es.Brembo"
                             name="brand">
-
+                            @error('brand') <span class="error alert alert-danger">{{ $message }}</span> @enderror 
                     </div>
 
                     <div class="mb-3 text-white">
                         <label class="form-label">Destrizione</label>
                         <textarea class="form-control" wire:model="description" id="" cols="30" rows="10" name="description"></textarea>
-
+                        @error('description') <span class="error alert alert-danger">{{ $message }}</span> @enderror 
 
                     </div>
 
                     <div class="mb-3 text-white">
                         <label class="form-label ">Foto dell'articolo</label>
-                        <input type="file" class="form-control" wire:model="img" placeholder=".img .jpeg" name="img">
+                        <input type="file" class="form-control" wire:model="img" placeholder=".img .jpeg"
+                            name="img">
 
                     </div>
 

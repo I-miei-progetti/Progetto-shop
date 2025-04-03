@@ -74,8 +74,6 @@ h4 {
     content: ''!important;
     border: none!important;
 }
-/* 
-
 
 /* Rimuove l'alone blu di Bootstrap */
 /* .input-group:focus-within {
@@ -84,10 +82,7 @@ h4 {
   border-color: var(--orange) !important;
   border-radius: 5px !important;
 }
-
-
-
- */
+*/
 .btnSearch {
     background-color: var(--blue) !important;
     color: var(--silver) !important;
@@ -129,6 +124,17 @@ h4 {
     border: solid 2px var(--orange) !important;
     transition: 2s;
     background-color: var(--orange);
+}
+
+@media screen and (max-width: 992px){
+    .navbar-collapse{
+        background-color: var(--silver);
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    .search-bar{
+        visibility: hidden;
+    }
 }
 
 /* Fine NavBar */
@@ -314,3 +320,4 @@ swiper-slide .text {
     background-color: var(--orange); /* Cambia colore al passaggio del mouse */
     color: black;
 }
+

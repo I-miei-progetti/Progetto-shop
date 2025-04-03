@@ -17,6 +17,9 @@ Route::get('/componenti', function () {
     return view('component.createComponent');
 })->name('component.index');
 
+Route::get('/component/indice',[PubliController::class, 'indice'])->name('component.indice');
+
+
 Route::get('/car/update{car}', [CarsController::class, 'update'])->name('car.update');
 Route::get('/review/index', [ReviewController::class, 'index'])->name('review.index');
 

@@ -38,4 +38,8 @@ class PubliController extends Controller
         return redirect (route('home'))->with('message','Grazie per averci contattao, la tua candidatura sarà presa in esame quanto prima');
     }
 
+    public function indice(){
+        return view ('indice');
+    }
+
 }

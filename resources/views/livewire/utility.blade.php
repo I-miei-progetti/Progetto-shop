@@ -27,8 +27,7 @@
 
                     <div class="mb-3 text-white">
                         <label type="number">UPC</label>
-                        <input type="number" name="year" class="form-control" wire:model.blur="upc" min="1900"
-                            max="2100" step="1" placeholder="Es. 123456789" name="upc">
+                        <input type="number" name="year" class="form-control" wire:model.blur="upc" step="1" placeholder="Es. 123456789" name="upc">
                             @error('upc') <span class="error alert alert-danger">{{ $message }}</span> @enderror 
                             <p class="copyright">{{ $upc }}</p>
                     </div>
@@ -36,7 +35,7 @@
                     <div class="mb-3 text-white">
                         <label class="form-label">Prezzo</label>
                         <input type="number" class="form-control" wire:model="price" placeholder="€" name="price">
-
+                        @error('price') <span class="error alert alert-danger">{{ $message }}</span> @enderror 
                     </div>
 
                     <div class="mb-3 text-white">

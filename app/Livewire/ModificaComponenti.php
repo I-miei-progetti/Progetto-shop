@@ -29,6 +29,6 @@ class ModificaComponenti extends Component
 
     public function render()
     {
-        return view('livewire.modificaComponenti');
+        return view('livewire.modifica-componenti');
     }
 }

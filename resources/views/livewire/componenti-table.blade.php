@@ -30,7 +30,7 @@
                     <td>{{ $component->description }}</td>
                     <td> <button wire:click="deleteComponenti({{ $component->id }})"
                             class="btn btn-danger">Elimina</button>
-                           <a href="{{route('component.modifica',['id'=>$component->id])}}" class="btn btn-warning">Modifica</a>
+                           <a href="{{route('component.modifica',['id' => $component->id])}}" class="btn btn-warning">Modifica</a>
                     </td>
                 </tr>
             @endforeach

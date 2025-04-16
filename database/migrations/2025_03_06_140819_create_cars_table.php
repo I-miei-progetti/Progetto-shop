@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('year');
             $table->string('img');
             $table->float('price', 6, 2);
-            $table->unsignementBigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->timestamps();
         });
     }
 

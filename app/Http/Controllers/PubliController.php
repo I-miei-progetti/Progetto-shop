@@ -45,8 +45,7 @@ class PubliController extends Controller
 
 
     public function modifica($id){
-        $component = ComponentModel::find($id);
-        return view ('modifica', compact('component') );
+        return view ('modifica', compact('id') );
     }
 
    

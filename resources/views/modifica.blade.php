@@ -5,7 +5,8 @@
        
     </div>
 </div>
-<livewire: modificaComponenti 
-componentId="{{ $id }}"
+
+<livewire:modifica-componenti 
+componentId="{{$id}}"
 />
 </x-layout>

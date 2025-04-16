@@ -45,7 +45,7 @@
 
                         <span class="icon-container"><img src="/icon/search-interface-symbol.png" class="icon"></span>
 
-                        <div class="input-container"><input class="search-input" type="search"
+                        <div class="input-container"><input class="search-input" type="search" name="query"
                                 placeholder="Cerca nel sito..." aria-label="Search"></div>
 
                     </div>

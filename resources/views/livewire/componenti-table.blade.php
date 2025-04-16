@@ -2,7 +2,7 @@
 
     <table class="table border table-dark table-striped table-striped table-bordered align-middle">
         <thead>
-            <tr>
+            <tr class="text-center">
                 <th scope="col"></th>
                 <th scope="col">Nome</th>
                 <th scope="col">Categoria</th>
@@ -28,9 +28,13 @@
                     <td>{{ $component->price }},00€</td>
                     <td>{{ $component->brand }}</td>
                     <td>{{ $component->description }}</td>
-                    <td> <button wire:click="deleteComponenti({{ $component->id }})"
-                            class="btn btn-danger mb-2">Elimina</button>
-                           <a href="{{route('component.modifica',['id' => $component->id])}}" class="btn btn-warning">Modifica</a>
+                    <td class="text-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <button wire:click="deleteComponenti({{ $component->id }})"
+                                class="btn btn-danger mb-2">Elimina</button>
+                            <a href="{{ route('component.modifica', ['id' => $component->id]) }}"
+                                class="btn btn-warning">Modifica</a>
+                        </div>
                     </td>
                 </tr>
             @endforeach

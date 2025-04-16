@@ -42,6 +42,7 @@ class Utility extends Component
 
         $this->reset();
         session()->flash('message', 'Componente salvato con successo!');
+        return redirect(route('component.indice'));
 
     }
     public function render()

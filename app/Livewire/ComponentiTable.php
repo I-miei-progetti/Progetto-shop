@@ -8,6 +8,7 @@ class ComponentiTable extends Component
 {
 public function deleteComponenti($id){
     ComponentModel::find($id)->delete();
+    
 }
 
 

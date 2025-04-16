@@ -29,6 +29,7 @@ class Utility extends Component
     public function saveData()
     {
         $this->validate();
+        
         ComponentModel::create([
             'name'        => $this->name,
             'category'    => $this->category,

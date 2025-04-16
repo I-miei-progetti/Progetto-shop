@@ -5,6 +5,7 @@ use App\Models\Cars;
 use App\Mail\WorkMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Component as ComponentModel;
 
 class PubliController extends Controller
 {
@@ -42,4 +43,15 @@ class PubliController extends Controller
         return view ('indice');
     }
 
+
+    public function modifica($id){
+        $component = ComponentModel::find($id);
+        return view ('modifica', compact('component') );
+    }
+
+   
+    // public function edit($id){
+    // $article = Article:: find($id);
+    // return view ('edit', compact('article') );
+    // }
 }

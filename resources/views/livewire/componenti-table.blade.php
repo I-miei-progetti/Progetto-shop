@@ -10,6 +10,8 @@
                 <th scope="col">Prezzo</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Descrizione</th>
+                <th scope="col"> Azioni
+            </tr>
 
             </tr>
         </thead>
@@ -18,7 +20,7 @@
                 <tr>
                     <td scope="row">
                         <img src="{{ asset('storage/' . $component->img) }}" alt="" class=" rounded"
-                             style="min-width:50px; width: 120px; height:100px;">
+                            style="min-width:50px; width: 120px; height:100px;">
                     </td>
                     <td>{{ $component->name }}</td>
                     <td>{{ $component->category }}</td>
@@ -26,6 +28,10 @@
                     <td>{{ $component->price }},00€</td>
                     <td>{{ $component->brand }}</td>
                     <td>{{ $component->description }}</td>
+                    <td> <button wire:click="deleteComponenti({{ $component->id }})"
+                            class="btn btn-danger">Elimina</button>
+                           <a href="{{route('component.modifica',['id'=>$component->id])}}" class="btn btn-warning">Modifica</a>
+                    </td>
                 </tr>
             @endforeach
 

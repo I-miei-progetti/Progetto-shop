@@ -15,6 +15,8 @@ class ModificaComponenti extends Component
     public $description;
     public $img;
 
+    public $component;
+
     public function mount($componentId){
         $component =ComponentModel::find($componentId);
 
@@ -25,7 +27,24 @@ class ModificaComponenti extends Component
         $this->brand = $component->brand;
         $this->description = $component->description;
         $this->img = $component->img;
+
+        $this->component=$component;
     }
+
+public function updateComponenti(){
+$this->component->update(
+    [
+        'name' => $this->name,
+        'category' => $this->category,
+        'upc' => $this->upc,
+        'price' => $this->price,
+        'brand' => $this->brand,
+        'description' => $this->description,
+        'img' => $this->img
+    ]
+);
+return redirect(route('component.indice'));
+}
 
     public function render()
     {

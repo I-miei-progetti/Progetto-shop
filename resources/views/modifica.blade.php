@@ -1,12 +1,11 @@
 <x-layout>
 <div class="container my-1">
     <div class="row justify-content-center">
-       <h2 class="text-center my-5 text-light">Modifica</h2>
-       
+        <livewire:modifica-componenti 
+        componentId="{{$id}}"
+        />
     </div>
 </div>
 
-<livewire:modifica-componenti 
-componentId="{{$id}}"
-/>
+
 </x-layout>

@@ -29,7 +29,7 @@
                     <td>{{ $component->brand }}</td>
                     <td>{{ $component->description }}</td>
                     <td> <button wire:click="deleteComponenti({{ $component->id }})"
-                            class="btn btn-danger">Elimina</button>
+                            class="btn btn-danger mb-2">Elimina</button>
                            <a href="{{route('component.modifica',['id' => $component->id])}}" class="btn btn-warning">Modifica</a>
                     </td>
                 </tr>

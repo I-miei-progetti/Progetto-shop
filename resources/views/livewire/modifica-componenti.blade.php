@@ -2,11 +2,11 @@
 
     <div class="container my-5 pt-5">
         <div class="row justify-content-center">
-            <h3 class="text-center my-3 text-light mb-2">Componentistica </h3>
+            <h3 class="text-center my-3 text-light mb-2">Modifica </h3>
             <div class="col-12 col-md-6 border shadow rounded mt-2 blurred-bg">
 
                 {{-- modificare la rotta --}}
-                <form >
+                <form wire:submit.blur="updateComponenti">
 
 
                     <div class="mb-3 text-white mt-2">

@@ -16,3 +16,6 @@
 
 esotic@car.it
 psw:12345678
+
+emmanuelemanco@gmail.com
+psw: emmanuele88

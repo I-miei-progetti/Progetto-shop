@@ -40,7 +40,7 @@
             </ul>
 
             <div class="d-flex gap-4 me-2">
-                <div class="search-bar d-flex gap-4">
+                <form class="search-bar d-flex gap-4" role="search" action="{{route('car.search')}}" method="GET" >
                     <div class="input-group input-groupsh px-1">
 
                         <span class="icon-container"><img src="/icon/search-interface-symbol.png" class="icon"></span>
@@ -50,8 +50,8 @@
 
                     </div>
 
-                    <button class="btn btn-outline-success btnSearch" type="submit"> Cerca</button>
-                </div>
+                    <button class="btn btn-outline-success btnSearch" type="submit" id="basic-addon2"> Cerca</button>
+                </form>
                 <div class="d-flex align-items-center gap-4 me-4">
                     @guest {{-- inserisco qui il @guest così che quando mi collego o mi registro scompare il dropdown per accedere e registrarsi --}}
                         <div class="nav-item dropstart">

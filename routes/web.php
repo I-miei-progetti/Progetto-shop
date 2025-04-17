@@ -37,3 +37,4 @@ Route::put('/car/edit/{car}', [CarsController::class, 'edit'])->name('car.edit')
 Route::delete('/car/delete{car}', [CarsController::class, 'destroy'])->name('car.delete');
 
 // LOGICA DI RICERCA 
+Route::get('/search',[CarsController::class,'searchCars'])->name('car.search');

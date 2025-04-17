@@ -99,7 +99,12 @@ public function componenti(){
     return view ('component.shop');
 }
 
-
+public function searchCars(Request $request){
+    $query =$request->input('query');
+    $cars =Cars::search($query)->paginate(6);
+    return view ('car.searched',['cars'=>$cars, 'query'=>$query]);
+}
 
 
 }
+
